@@ -6,9 +6,10 @@
 
 <link href="../css/reset.css" type="text/css" rel="stylesheet">
 <link href="../customer/css/layout.css" type="text/css" rel="stylesheet">
+<script src ="../js/modernizr.js" type="text/javascript"></script>
+<script src ="../js/Copy of Notice.js" type="text/javascript">
 
-<script type="text/javascript">
-
+<!-- 
 /* var record= {kor:30,eng:70, math:80};
 alert(record.kor+record.eng);
 alert(5<3+4);
@@ -41,15 +42,15 @@ alert(m.name)=alert(m["name"]);
 alert(m.age)=alert(m["age"]);
 for (var i in m)
 	alert(m[k]); */
-
+/* 
 (function (a,b){return a+b;})(3,4);
 
 var x=(function (a,b)
-		{return a+b;})(3,4);
+		{return a+b;})(3,4); */
 
 	
 	
-function add(a,b)
+/*function add(a,b)
 {
 	return arguments[0]+arguments[1];
 }
@@ -59,22 +60,22 @@ confirm(sum);/*인자 갯수가 불일치해도 오류 안남.파라미터 값�
 
 
 
-var a=1;
+/*var a=1;
 var a=2;
 alert(a);	/* 결과:2 */
 
-{var a=1;}
+/*{var a=1;}
 alert(a);	/* 결과 :1 */
 
 
-function f1(){
+/*function f1(){
 	a=1;
 }
 f1();
 alert(a);	/*결과:1*/
 	
 	
-function f1(){
+/*function f1(){
 	var a=1;
 	function f2(){
 		var a=2;
@@ -85,8 +86,21 @@ function f1(){
 	}
 }
 f1();
-alert(a);
-	
+alert(a);*/
+
+function printResult(){
+	var x,y;
+	x=prompt("x값을 입력하세요");
+	y=prompt("y값을 입력하세요");
+	alert(x-y);
+}
+
+function init(){
+	var btn1 = document.getElementById("logo");
+	btn1.onclick=printResult;
+}
+window.onload=init;
+-->
 </script>
 
 <style>
@@ -309,6 +323,7 @@ alert(a);
 
 
 <body>
+
 	<header id="header">
 		<div class="content-wrapper">
 			<h1 id="logo">
@@ -336,8 +351,9 @@ alert(a);
 							<legend class="hidden">
 								<a href="">검색정보</a>
 							</legend>
-							<label>과정검색</label> <input type="text" /> <input class="button zoom-button"  type="submit"
+							<label>과정검색</label> <input type="text" onclick="printResult();"/> <input class="button zoom-button"  type="submit"
 								value="검색" />
+								<input id = "a"/>
 						</fieldset>
 					</form>
 				</section>
